@@ -1,12 +1,10 @@
 
 import { Template } from 'meteor/templating';
 
- 
-
 import { Tasks } from '../api/tasks.js';
 
  
-
+import './task.js';
 import './body.html';
 
  
@@ -16,11 +14,8 @@ Template.body.helpers({
   tasks() {
 
     return Tasks.find({}, { sort: { createdAt: -1 } });
-
   },
-
 });
-
 
 
 Template.body.events({
@@ -30,8 +25,6 @@ Template.body.events({
   // Prevent default browser form submit
 
   event.preventDefault();
-
-
 
   // Get value from form element
 
