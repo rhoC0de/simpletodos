@@ -1,4 +1,4 @@
-
+import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
 import { ReactiveDict } from 'meteor/reactive-dict';
 
@@ -64,7 +64,9 @@ Template.body.events({
     text,
 
     createdAt: new Date(), // current time
+    owner: Meteor.userId(),
 
+    username: Meteor.user().username,
   });
 
 
