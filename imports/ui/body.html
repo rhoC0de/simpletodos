@@ -18,9 +18,9 @@
         {{> loginButtons}}
 
       <form class="new-task">
-
+        {{#if currentUser}}
         <input type="text" name="text" placeholder="Type to add new tasks" />
-
+        {{/if}}
       </form>
   
       </header>
