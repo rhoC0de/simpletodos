@@ -55,7 +55,7 @@ Template.body.events({
 
   const text = target.text.value;
 
-
+  Meteor.call('tasks.insert', text);
 
   // Insert a task into the collection
 
