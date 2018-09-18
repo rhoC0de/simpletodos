@@ -60,7 +60,6 @@ Meteor.methods({
     'tasks.remove'(taskId) {
   
       check(taskId, String);
-
       const task = Tasks.findOne(taskId);
 
       if (task.private && task.owner !== Meteor.userId()) {
@@ -71,7 +70,6 @@ Meteor.methods({
   
       }
       Tasks.remove(taskId);
-
     },
   
     'tasks.setChecked'(taskId, setChecked) {
